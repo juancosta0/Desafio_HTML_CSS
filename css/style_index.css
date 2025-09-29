@@ -34,7 +34,8 @@ header{
 .rodape{
     background-color: #1b357e;
     display: flex;
-    align-items: center;
+    align-items: end;
+    justify-content: space-between;
 }
 
 .rodape p{
@@ -51,4 +52,5 @@ main{
     display: flex;
     justify-content: center;
 }
+
 
