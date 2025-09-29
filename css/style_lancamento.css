@@ -1,0 +1,72 @@
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header{
+    display: flex;
+    width: 100vw;
+    border-bottom: 1px solid gray;
+    padding-bottom: 10px;
+}
+.menu__link{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    gap: 300px;
+}
+.menu__link a{
+    text-decoration: none;
+    color: #1b357e;
+    font-size: 24px;
+}
+.menu__link__navegacao{
+    display: flex;
+    gap: 35px;
+}
+.header__logo img{
+    width: 150px;
+}
+.rodape{
+    background-color: #1b357e;
+    display: flex;
+    justify-content: space-between;
+    height: 7vh;
+    align-items: center;
+}
+.rodape__esquerdo{
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.rodape p{
+    color: white;
+}
+
+.rodape__img{
+    height: 30px;
+}
+.rodape__logo__ford{
+    height: 40px;
+    width: auto;
+    margin-right: 50px;
+}
+
+.main__video{
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    height: 50vh;
+    position: relative;
+    top: -16.5vh;
+}
+
+
+
+
