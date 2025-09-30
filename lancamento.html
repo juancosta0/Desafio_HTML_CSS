@@ -18,7 +18,7 @@
             <nav class="menu__link__navegacao">
                 <a href="home.html">Home</a>
                 <a href="lancamento.html">Lançamento</a>
-                <a href="">Contato</a>
+                <a href="contato.html">Contato</a>
             </nav>
         </section>
     </header>
@@ -33,44 +33,49 @@
 
         <section class="main_sessao__2">
             <table class="main__tabela">
-                <tr> <!--Cabeçalho da tabela-->
+                <tr class="main__tabela__cabecalho">
                     <th class="main__tabela__carro"><img src="./img/XL Cabine.jpg" alt="Carro XL Cabine"></th>
                     <th class="main__tabela__carro"><img src="./img/xls 2.2 diesel.jpg" alt="Carro XLS 2.2"></th>
                     <th class="main__tabela__carro"><img src="./img/storm.jpg" alt=""></th>
                 </tr>
 
-                <td class="linha__1">
-                    <div class="info__bloco">
-                        <input class="info__bloco__input" type="checkbox" id="veiculo1" name="veiculo1" >
-                        <div class="info__bloco__textos">
-                            <p class="modelo-nome">XL Cabine Simples 2.2 Diesel<br>4x4 MT 2022</p>
-                            <p class="modelo-preco">Preço Sugerido: R$ 193.550</p>
+                <tr class="main__tabela__linha">
+                    <td class="linha__1">
+                        <div class="info__bloco">
+                            <input class="info__bloco__input" type="checkbox" id="veiculo1" name="veiculo1">
+                            <label class="info__bloco__label" for="veiculo1"></label>
+                            <div class="info__bloco__textos">
+                                <p class="modelo-nome">XL Cabine Simples 2.2 Diesel<br>4x4 MT 2022</p>
+                                <p class="modelo-preco">Preço Sugerido: R$ 183.850</p>
+                            </div>
+                            <img class="info__bloco__info" src="./img/info.png" alt="">
                         </div>
-                        <img class="info__bloco__info" src="./img/info.png" alt="">
-                    </div>
-                </td>
-                <td class="linha__2">
-                    <div class="info__bloco">
-                        <input class="info__bloco__input" type="checkbox" id="veiculo2" name="veiculo2" >
-                        <div class="info__bloco__textos">
-                            <p class="modelo-nome">XLS 2.2 Diesel 4X4 AT 2022</p>
-                            <p class="modelo-preco">Preço Sugerido: R$ 220.690</p>
+                    </td>
+                    <td class="linha__2">
+                        <div class="info__bloco">
+                            <input class="info__bloco__input" type="checkbox" id="veiculo2" name="veiculo2">
+                            <label class="info__bloco__label" for="veiculo2"></label>
+                            <div class="info__bloco__textos">
+                                <p class="modelo-nome">XLS 2.2 Diesel 4X4 AT 2022</p>
+                                <p class="modelo-preco">Preço Sugerido: R$ 220.690</p>
+                            </div>
+                            <img class="info__bloco__info" src="./img/info.png" alt="">
                         </div>
-                        <img class="info__bloco__info" src="./img/info.png" alt="">
-                    </div>
-                </td>
-                <td class="linha__3">
-                    <div class="info__bloco">
-                        <input class="info__bloco__input" type="checkbox" id="veiculo3" name="veiculo3" >
-                        <div class="info__bloco__textos">
-                            <p class="modelo-nome">Storm 3.2 Diesel 4X4 AT 2022</p>
-                            <p class="modelo-preco">Preço Sugerido: R$ 222.790</p>
+                    </td>
+                    <td class="linha__3">
+                        <div class="info__bloco">
+                            <input class="info__bloco__input" type="checkbox" id="veiculo3" name="veiculo3">
+                            <label class="info__bloco__label" for="veiculo3"></label>
+                            <div class="info__bloco__textos">
+                                <p class="modelo-nome">Storm 3.2 Diesel 4X4 AT 2022</p>
+                                <p class="modelo-preco">Preço Sugerido: R$ 222.790</p>
+                            </div>
+                            <img class="info__bloco__info" src="./img/info.png" alt="">
                         </div>
-                        <img class="info__bloco__info" src="./img/info.png" alt="">
-                    </div>
-                </td>
+                    </td>
+                </tr>
             </table>
-                <a class="botao" href="">Comparar Carros</a>
+            <a class="botao" href="">Comparar Carros</a>
 
         </section>
     </main>

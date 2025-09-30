@@ -1,0 +1,197 @@
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header{
+    display: flex;
+    width: 100vw;
+    border-bottom: 1px solid gray;
+    padding-bottom: 10px;
+}
+.menu__link{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    gap: 300px;
+}
+.menu__link a{
+    text-decoration: none;
+    color: #007bff;
+    font-size: 24px;
+}
+.menu__link__navegacao{
+    display: flex;
+    gap: 35px;
+}
+.header__logo img{
+    width: 150px;
+}
+
+
+
+.rodape{
+    background-color: #1b357e;
+    display: flex;
+    justify-content: space-between;
+    height: 7vh;
+    align-items: center;
+}
+.rodape__esquerdo{
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.rodape p{
+    color: white;
+}
+
+.rodape__img{
+    height: 30px;
+}
+.rodape__logo__ford{
+    height: 40px;
+    width: auto;
+    margin-right: 50px;
+}
+
+
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main.main-contato {
+    flex-grow: 1;
+    display: flex;
+    align-items: flex-start; /* Garante o alinhamento vertical geral na página */
+    justify-content: center;
+    padding: 4rem 0;
+}
+
+.contato-container {
+    display: flex;
+    align-items: center; /* Alinha o carro e o formulário verticalmente um ao outro */
+    justify-content: center;
+    gap: 1rem;
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 2rem;
+    margin-left: 19rem;
+}
+
+.contato-imagem img {
+    max-width: 500px;
+    width: 100%;
+    margin-top: 2rem;
+}
+
+.contato-imagem{
+    display: flex;
+    align-self: flex-start;
+
+}
+
+/* --- Estilos do Formulário --- */
+.contato-formulario {
+    width: 100%;
+    max-width: 500px;
+
+}
+
+/* Título centralizado */
+.contato-formulario h2 {
+    font-size: 1.4rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+    text-align: start;
+}
+
+/* Espaçamento entre os campos REDUZIDO */
+.form-group {
+    margin-bottom: 0.6rem; 
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.9rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    resize: vertical;
+}
+
+/* Estilos para o texto do placeholder */
+::placeholder {
+  color: #888;
+  opacity: 1;
+}
+
+select:required:invalid {
+    color: #888;
+}
+option[value=""][disabled] {
+    display: none;
+}
+option {
+    color: #000;
+}
+
+
+
+
+
+
+
+
+
+/* Botão CENTRALIZADO */
+.button-container {
+    display: flex;
+    justify-content: flex-end; 
+}
+.botao-enviar {
+    width: auto;
+    padding: 0.6rem 7.5rem;
+    background-color: #0d6efd;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.botao-enviar:hover {
+    background-color: #0b5ed7;
+}
+
+/* --- Responsividade --- */
+@media (max-width: 900px) {
+    .contato-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .button-container {
+        justify-content: center;
+    }
+}

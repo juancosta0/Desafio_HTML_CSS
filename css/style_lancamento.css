@@ -22,7 +22,7 @@ header{
 }
 .menu__link a{
     text-decoration: none;
-    color: #1b357e;
+    color: #007bff;
     font-size: 24px;
 }
 .menu__link__navegacao{
@@ -66,7 +66,7 @@ header{
     width: 100vw;
     height: 50vh;
     position: relative;
-    top: -4vh;
+    top: -1vh;
 }
 
 .main__tabela{
@@ -89,9 +89,57 @@ header{
     left: 3.3vh;
 }
 
-.info__bloco__input{
-    width: 2rem;
-    height: 2rem;
+
+
+/* 1. Esconde o checkbox original de forma acessível */
+.info__bloco__input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+    position: absolute; /* Tira ele do fluxo da página */
+}
+
+
+.info__bloco__label {
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    background-color: #fff; 
+    border: 2px solid #ccc; /* Borda cinza */
+    border-radius: 4px;
+    display: inline-block;
+    position: relative;
+    transition: all 0.2s ease; /* Efeito de transição suave */
+}
+
+
+.info__bloco__input:checked + .info__bloco__label {
+    background-color: #007bff; 
+    border-color: #007bff;
+}
+
+/* 4. Cria o símbolo de "check" (✓) usando um pseudo-elemento ::after */
+.info__bloco__label::after {
+    content: '';
+    position: absolute;
+    display: none; 
+}
+
+/* 5. Mostra e estiliza o "check" quando o input for marcado */
+.info__bloco__input:checked + .info__bloco__label::after {
+    display: block; /* Mostra o "check" */
+    left: 8px;
+    top: 4px;
+    width: 6px;
+    height: 12px;
+    border: solid white; /* O "check" será branco */
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+}
+
+
+.info__bloco {
+    gap: 10px; 
 }
 
 .modelo-preco{
@@ -106,21 +154,36 @@ header{
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100vw;
 }
 
 .botao{
-    background-color: #1b357e;
+    background-color: #007bff; 
     color: white;
-    border-radius: 12px;
+    border-radius: 12px; 
     width: 13vw;
     padding: 1vh;
     margin-top: 2vh;
     display: flex;
     justify-content: center;
     text-decoration: none;
-    
+    font-size: 1.2em; 
+    font-weight: bold; 
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; 
 }
 
+.botao:hover {
+    background-color: #0056b3; 
+}
 
+.main__tabela__linha{
+    display: flex;
+    gap: 4vw;
+    justify-content: space-between;
+}
 
+.main__tabela__cabecalho{
+    display: flex;
+    gap: 4vw;
+}
 
