@@ -79,14 +79,16 @@ header{
 .info__bloco{
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .info__bloco__info{
     display: flex;
     position: relative;
     top: -0.3vh;
-    left: 1vh;
+    left: 3vh;
 }
+
 
 
 
