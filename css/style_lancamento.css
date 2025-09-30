@@ -58,13 +58,34 @@ header{
     margin-right: 50px;
 }
 
+
+
 .main__video{
     display: flex;
     justify-content: center;
     width: 100vw;
     height: 50vh;
     position: relative;
-    top: -16.5vh;
+    top: -4vh;
+}
+
+.main__tabela{
+    display: flex;
+    justify-content: center;
+
+}
+
+
+.info__bloco{
+    display: flex;
+    align-items: center;
+}
+
+.info__bloco__info{
+    display: flex;
+    position: relative;
+    top: -0.3vh;
+    left: 1vh;
 }
 
 
