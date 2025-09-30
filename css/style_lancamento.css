@@ -72,6 +72,7 @@ header{
 .main__tabela{
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 
 }
 
