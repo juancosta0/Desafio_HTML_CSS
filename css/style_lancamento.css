@@ -1,4 +1,4 @@
-body{
+body {
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -7,12 +7,13 @@ body{
     font-family: Arial, Helvetica, sans-serif;
 }
 
-header{
+header {
     display: flex;
     width: 100vw;
     border-bottom: 1px solid gray;
     padding-bottom: 10px;
 }
+
 .menu__link{
     display: flex;
     align-items: center;
@@ -30,13 +31,16 @@ header{
     gap: 35px;
 }
 .header__logo img{
+    width: 100%;
+}
+.header__logo{
     width: 150px;
 }
+
 .rodape{
     background-color: #1b357e;
     display: flex;
     justify-content: space-between;
-    height: 7vh;
     align-items: center;
 }
 .rodape__esquerdo{
@@ -55,12 +59,10 @@ header{
 .rodape__logo__ford{
     height: 40px;
     width: auto;
-    margin-right: 50px;
 }
 
 
-
-.main__video{
+.main__video {
     display: flex;
     justify-content: center;
     width: 100vw;
@@ -69,122 +71,156 @@ header{
     top: -1vh;
 }
 
-.main__tabela{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-
-}
-
-
-.info__bloco{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.info__bloco__info{
-    display: flex;
-    position: relative;
-    top: -0.3vh;
-    left: 3.3vh;
-}
-
-
-
-/* 1. Esconde o checkbox original de forma acessível */
-.info__bloco__input {
-    opacity: 0;
-    width: 0;
-    height: 0;
-    position: absolute; /* Tira ele do fluxo da página */
-}
-
-
-.info__bloco__label {
-    cursor: pointer;
-    width: 24px;
-    height: 24px;
-    background-color: #fff; 
-    border: 2px solid #ccc; /* Borda cinza */
-    border-radius: 4px;
-    display: inline-block;
-    position: relative;
-    transition: all 0.2s ease; /* Efeito de transição suave */
-}
-
-
-.info__bloco__input:checked + .info__bloco__label {
-    background-color: #007bff; 
-    border-color: #007bff;
-}
-
-/* 4. Cria o símbolo de "check" (✓) usando um pseudo-elemento ::after */
-.info__bloco__label::after {
-    content: '';
-    position: absolute;
-    display: none; 
-}
-
-/* 5. Mostra e estiliza o "check" quando o input for marcado */
-.info__bloco__input:checked + .info__bloco__label::after {
-    display: block; /* Mostra o "check" */
-    left: 8px;
-    top: 4px;
-    width: 6px;
-    height: 12px;
-    border: solid white; /* O "check" será branco */
-    border-width: 0 3px 3px 0;
-    transform: rotate(45deg);
-}
-
-
-.info__bloco {
-    gap: 10px; 
-}
-
-.modelo-preco{
-    font-size: 0.8rem
-}
-.modelo-nome{
-    font-size: 1rem;
-    color: #1b357e;
-}
-
-.main_sessao__2{
+.main_sessao__2 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100vw;
+    width: 100%;
+    text-align: center;
 }
 
-.botao{
-    background-color: #007bff; 
-    color: white;
-    border-radius: 12px; 
-    width: 13vw;
-    padding: 1vh;
-    margin-top: 2vh;
+.carros__div {
     display: flex;
     justify-content: center;
+    /* O wrap permite que os itens quebrem para a linha de baixo se não houver espaço */
+    flex-wrap: wrap;
+    gap: 2rem;
+    /* Espaçamento entre os cards */
+    width: 100%;
+    max-width: 1200px;
+}
+
+.carro__imagem {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.botao {
+    background-color: #007bff;
+    color: white;
+    border-radius: 25px;
+    width: 100%;
+    max-width: 280px;
+    padding: 15px 20px;
     text-decoration: none;
-    font-size: 1.2em; 
-    font-weight: bold; 
-    transition: background-color 0.3s ease, box-shadow 0.3s ease; 
+    font-size: 1.1em;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    display: block;
 }
 
 .botao:hover {
-    background-color: #0056b3; 
+    background-color: #0056b3;
+    transform: scale(1.05);
 }
 
-.main__tabela__linha{
+
+input[type="checkbox"] {
+    transform: scale(1.7);
+    margin-right: 10px;
+    margin-bottom: 10px;
+
+}
+
+.proco {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #1b357e;
+}
+
+label {
+    color: #007bff;
+}
+
+
+.carros__div {
     display: flex;
-    gap: 4vw;
-    justify-content: space-between;
+    width: 100%;
+    justify-content: center;
+    gap: 10px;
+
 }
 
-.main__tabela__cabecalho{
+.carros__individual {
     display: flex;
-    gap: 4vw;
+    position: relative;
+    top: -15px;
 }
 
+.logo_info {
+    position: relative;
+    width: 30px;
+    align-self: flex-end;
+    top: -30px;
+    left: -20px
+}
+
+.main__video_container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+@media (max-width: 1024px) {
+    .carros__div {
+        gap: 1.5rem;
+    }
+
+    .carros__individual {
+        width: 300px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .main_sessao__2 {
+        padding: 2rem 1rem;
+    }
+
+
+    .carros__div {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .carros__individual {
+        width: 95%;
+        max-width: 400px;
+    }
+
+    .botao {
+        width: 90%;
+        max-width: none;
+
+    }
+
+    .main__video_container {
+        width: 100%;
+        border-radius: 0;
+    }
+}
+
+
+@media(max-width: 521px) {
+    header{
+    flex-direction: column;
+    align-items: center;
+    }
+    .menu__link__navegacao{
+        flex-direction: column;
+        align-items: center;
+    }
+    .rodape{
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+    }
+
+}

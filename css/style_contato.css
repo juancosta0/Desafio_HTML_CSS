@@ -1,4 +1,4 @@
-body{
+body {
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -7,82 +7,86 @@ body{
     font-family: Arial, Helvetica, sans-serif;
 }
 
-header{
+header {
     display: flex;
     width: 100vw;
     border-bottom: 1px solid gray;
     padding-bottom: 10px;
 }
-.menu__link{
+
+.menu__link {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100vw;
     gap: 300px;
 }
-.menu__link a{
+
+.menu__link a {
     text-decoration: none;
     color: #007bff;
     font-size: 24px;
 }
-.menu__link__navegacao{
+
+.menu__link__navegacao {
     display: flex;
     gap: 35px;
 }
-.header__logo img{
+
+.header__logo img {
+    width: 100%;
+}
+
+.header__logo {
     width: 150px;
 }
 
-
-
-.rodape{
+.rodape {
     background-color: #1b357e;
     display: flex;
     justify-content: space-between;
-    height: 7vh;
     align-items: center;
 }
-.rodape__esquerdo{
+
+.rodape__esquerdo {
     display: flex;
     align-items: center;
     gap: 0.3rem;
 }
 
-.rodape p{
+.rodape p {
     color: white;
 }
 
-.rodape__img{
+.rodape__img {
     height: 30px;
 }
-.rodape__logo__ford{
+
+.rodape__logo__ford {
     height: 40px;
     width: auto;
-    margin-right: 50px;
 }
-
-
 
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    margin: 0;
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    color: #333;
 }
 
 main.main-contato {
     flex-grow: 1;
     display: flex;
-    align-items: flex-start; /* Garante o alinhamento vertical geral na página */
     justify-content: center;
-    padding: 4rem 0;
+    align-items: center;
+    padding: 2rem 1rem;
 }
 
 .contato-container {
     display: flex;
-    align-items: center; /* Alinha o carro e o formulário verticalmente um ao outro */
+    align-items: center;
+    /* Alinha o carro e o formulário verticalmente um ao outro */
     justify-content: center;
     gap: 1rem;
     width: 100%;
@@ -92,12 +96,13 @@ main.main-contato {
 }
 
 .contato-imagem img {
-    max-width: 500px;
-    width: 100%;
-    margin-top: 2rem;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
 }
 
-.contato-imagem{
+
+.contato-imagem {
     display: flex;
     align-self: flex-start;
 
@@ -116,12 +121,12 @@ main.main-contato {
     color: #333;
     margin-bottom: 1.5rem;
     font-weight: bold;
-    text-align: start;
+
 }
 
 /* Espaçamento entre os campos REDUZIDO */
 .form-group {
-    margin-bottom: 0.6rem; 
+    margin-bottom: 0.6rem;
 }
 
 .form-group input,
@@ -137,18 +142,28 @@ main.main-contato {
     resize: vertical;
 }
 
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.2);
+}
+
 /* Estilos para o texto do placeholder */
 ::placeholder {
-  color: #888;
-  opacity: 1;
+    color: #888;
+    opacity: 1;
 }
 
 select:required:invalid {
     color: #888;
 }
+
 option[value=""][disabled] {
     display: none;
 }
+
 option {
     color: #000;
 }
@@ -164,8 +179,9 @@ option {
 /* Botão CENTRALIZADO */
 .button-container {
     display: flex;
-    justify-content: flex-end; 
+    justify-content: flex-end;
 }
+
 .botao-enviar {
     width: auto;
     padding: 0.6rem 7.5rem;
@@ -184,14 +200,45 @@ option {
     background-color: #0b5ed7;
 }
 
-/* --- Responsividade --- */
-@media (max-width: 900px) {
+@media (max-width: 992px) {
     .contato-container {
         flex-direction: column;
+        position: relative;
+        left: -7rem;
+
+    }
+
+
+
+
+    .contato-formulario {
+        flex: initial;
+        /* Reseta o comportamento de crescimento do flex */
+        width: 100%;
+        max-width: none;
+        /* Permite que o formulário ocupe toda a largura */
+    }
+
+    .contato-formulario h2 {
         text-align: center;
     }
-    
-    .button-container {
-        justify-content: center;
+}
+
+@media(max-width: 521px) {
+    header {
+        flex-direction: column;
+        align-items: center;
     }
+
+    .menu__link__navegacao {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .rodape {
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+    }
+
 }
