@@ -198,6 +198,8 @@ option {
 
 .botao-enviar:hover {
     background-color: #0b5ed7;
+    transform: scale(1.05);
+
 }
 
 @media (max-width: 992px) {
