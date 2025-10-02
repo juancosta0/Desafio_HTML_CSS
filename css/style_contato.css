@@ -204,7 +204,7 @@ option {
     .contato-container {
         flex-direction: column;
         position: relative;
-        left: -7rem;
+            left: -8rem;
 
     }
 
